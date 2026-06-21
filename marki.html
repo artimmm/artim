@@ -8,40 +8,90 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    .category-block { margin-bottom: 3.5rem; }
-    .category-title {
-      font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem;
-      color: #111; border-bottom: 2px solid #DB0E15;
-      display: inline-block; padding-bottom: 0.4rem;
+    /* Wbudowane style dla podstrony marek - gwarancja działania i pięknego wyglądu */
+    .brands-section {
+      padding-top: 20px;
     }
-    .brands-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    .category-wrapper {
+      margin-bottom: 50px;
+    }
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text, #0f172a);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
       gap: 16px;
     }
-    .brand-tile {
-      background-color: #111111; border: 2px solid #333333;
-      border-radius: 8px; padding: 24px 16px;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; transition: all 0.2s ease; cursor: default;
+    /* Estetyczna linia obok tytułu kategorii */
+    .category-title::after {
+      content: "";
+      height: 2px;
+      flex: 1;
+      background: var(--line, #e2e8f0);
+      border-radius: 2px;
     }
-    .brand-tile:hover {
-      border-color: #DB0E15; transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(219, 14, 21, 0.15);
+    .dark-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
     }
-    .brand-name {
-      color: #ffffff; font-size: 1.15rem; font-weight: 700;
-      letter-spacing: 1px; text-transform: uppercase;
+    .dark-tile {
+      background-color: #0f172a; /* Eleganckie, bardzo ciemne tło */
+      border: 2px solid #334155; /* Wyraźna ramka */
+      border-radius: 12px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
-    .brand-subtext {
-      color: #DB0E15; font-size: 0.8rem; font-weight: 600; margin-top: 6px;
+    /* Efekt najechania korzystający z Twojego głównego koloru z CSS */
+    .dark-tile:hover {
+      border-color: var(--brand, #0a4693);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
     }
-    .other-brands-card {
-      margin-top: 4rem; padding: 2.5rem; background-color: #fafafa;
-      border: 1px solid #eaeaea; border-radius: 12px; text-align: center;
+    .dark-tile-name {
+      color: #f8fafc;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
-    .other-brands-card h3 { font-size: 1.4rem; margin-bottom: 1rem; color: #000; }
-    .other-brands-card p { color: #555; line-height: 1.7; margin: 0; font-size: 1rem; }
+    .dark-tile-sub {
+      color: #94a3b8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .other-brands-box {
+      background-color: var(--card, #ffffff);
+      border: 1px solid var(--line, #e2e8f0);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 20px;
+      box-shadow: var(--shadow);
+    }
+    .other-brands-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .other-brands-box p {
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 800px;
+    }
   </style>
 </head>
 <body>
@@ -79,48 +129,52 @@
           Specjalizujemy się w naprawach sprzętu wiodących producentów elektroniki użytkowej oraz urządzeń domowych.
         </p>
 
-        <div class="category-block">
-          <h3 class="category-title">Telewizory</h3>
-          <div class="brands-grid">
-            <div class="brand-tile"><span class="brand-name">Panasonic</span><span class="brand-subtext">(autoryzacja)</span></div>
-            <div class="brand-tile"><span class="brand-name">LG</span></div>
-            <div class="brand-tile"><span class="brand-name">Samsung</span></div>
-            <div class="brand-tile"><span class="brand-name">Sony</span></div>
-            <div class="brand-tile"><span class="brand-name">Hisense</span></div>
-            <div class="brand-tile"><span class="brand-name">TCL</span></div>
+        <div class="brands-section">
+          
+          <div class="category-wrapper">
+            <h3 class="category-title">Telewizory</h3>
+            <div class="dark-grid">
+              <div class="dark-tile"><span class="dark-tile-name">Panasonic</span><span class="dark-tile-sub">(autoryzacja)</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">LG</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Samsung</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Sony</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Hisense</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">TCL</span></div>
+            </div>
           </div>
+
+          <div class="category-wrapper">
+            <h3 class="category-title">Ekspresy ciśnieniowe</h3>
+            <div class="dark-grid">
+              <div class="dark-tile"><span class="dark-tile-name">Jura</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">DeLonghi</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Nivona</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Saeco</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Siemens</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Sage</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Philips</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Krups</span></div>
+            </div>
+          </div>
+
+          <div class="category-wrapper">
+            <h3 class="category-title">Sprzęt Audio</h3>
+            <div class="dark-grid">
+              <div class="dark-tile"><span class="dark-tile-name">Technics</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Panasonic</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Marantz</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Onkyo</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Harman Kardon</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Sony</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">JBL</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">LG</span></div>
+              <div class="dark-tile"><span class="dark-tile-name">Samsung</span></div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="category-block">
-          <h3 class="category-title">Ekspresy ciśnieniowe</h3>
-          <div class="brands-grid">
-            <div class="brand-tile"><span class="brand-name">Jura</span></div>
-            <div class="brand-tile"><span class="brand-name">DeLonghi</span></div>
-            <div class="brand-tile"><span class="brand-name">Nivona</span></div>
-            <div class="brand-tile"><span class="brand-name">Saeco</span></div>
-            <div class="brand-tile"><span class="brand-name">Siemens</span></div>
-            <div class="brand-tile"><span class="brand-name">Sage</span></div>
-            <div class="brand-tile"><span class="brand-name">Philips</span></div>
-            <div class="brand-tile"><span class="brand-name">Krups</span></div>
-          </div>
-        </div>
-
-        <div class="category-block">
-          <h3 class="category-title">Sprzęt Audio</h3>
-          <div class="brands-grid">
-            <div class="brand-tile"><span class="brand-name">Technics</span></div>
-            <div class="brand-tile"><span class="brand-name">Panasonic</span></div>
-            <div class="brand-tile"><span class="brand-name">Marantz</span></div>
-            <div class="brand-tile"><span class="brand-name">Onkyo</span></div>
-            <div class="brand-tile"><span class="brand-name">Harman Kardon</span></div>
-            <div class="brand-tile"><span class="brand-name">Sony</span></div>
-            <div class="brand-tile"><span class="brand-name">JBL</span></div>
-            <div class="brand-tile"><span class="brand-name">LG</span></div>
-            <div class="brand-tile"><span class="brand-name">Samsung</span></div>
-          </div>
-        </div>
-
-        <div class="other-brands-card">
+        <div class="other-brands-box">
           <h3>Obsługa pozostałych marek i producentów</h3>
           <p>
             Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku. Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.
