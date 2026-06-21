@@ -6,93 +6,6 @@
   <title>Artim</title>
   <link rel="icon" type="image/jpeg" href="icon.jpg">
   <link rel="stylesheet" href="style.css">
-  
-  <style>
-    /* Wbudowane style dla podstrony marek - gwarancja działania i pięknego wyglądu */
-    .brands-section {
-      padding-top: 20px;
-    }
-    .category-wrapper {
-      margin-bottom: 50px;
-    }
-    .category-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--text, #0f172a);
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    /* Estetyczna linia obok tytułu kategorii */
-    .category-title::after {
-      content: "";
-      height: 2px;
-      flex: 1;
-      background: var(--line, #e2e8f0);
-      border-radius: 2px;
-    }
-    .dark-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      gap: 16px;
-    }
-    .dark-tile {
-      background-color: #0f172a; /* Eleganckie, bardzo ciemne tło */
-      border: 2px solid #334155; /* Wyraźna ramka */
-      border-radius: 12px;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-    /* Efekt najechania korzystający z Twojego głównego koloru z CSS */
-    .dark-tile:hover {
-      border-color: var(--brand, #0a4693);
-      transform: translateY(-4px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
-    }
-    .dark-tile-name {
-      color: #f8fafc;
-      font-weight: 800;
-      font-size: 1.15rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    .dark-tile-sub {
-      color: #94a3b8;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-top: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .other-brands-box {
-      background-color: var(--card, #ffffff);
-      border: 1px solid var(--line, #e2e8f0);
-      border-radius: 16px;
-      padding: 40px;
-      text-align: center;
-      margin-top: 20px;
-      box-shadow: var(--shadow);
-    }
-    .other-brands-box h3 {
-      font-size: 1.25rem;
-      margin-bottom: 16px;
-      color: var(--text);
-    }
-    .other-brands-box p {
-      margin: 0 auto;
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 800px;
-    }
-  </style>
 </head>
 <body>
   <header class="topbar">
@@ -107,7 +20,7 @@
       <nav class="nav">
         <div class="nav-links">
           <a href="o-serwisie.html">O serwisie</a>
-          <a href="marki.html" style="color: var(--brand, #0a4693);">Marki</a>
+          <a href="marki.html" style="color: #0a4693;">Marki</a>
           <a href="uslugi.html">Usługi</a>
           <a href="proces.html">Proces</a>
           <a href="faq.html">FAQ</a>
@@ -118,81 +31,59 @@
     </div>
   </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        
-        <div class="section-head">
-          <h2>Marki, które obsługujemy w naszym serwisie</h2>
-        </div>
-        <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
-          Specjalizujemy się w naprawach sprzętu wiodących producentów elektroniki użytkowej oraz urządzeń domowych.
-        </p>
-
-        <div class="brands-section">
-          
-          <div class="category-wrapper">
-            <h3 class="category-title">Telewizory</h3>
-            <div class="dark-grid">
-              <div class="dark-tile"><span class="dark-tile-name">Panasonic</span><span class="dark-tile-sub">(autoryzacja)</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">LG</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Samsung</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Sony</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Hisense</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">TCL</span></div>
-            </div>
-          </div>
-
-          <div class="category-wrapper">
-            <h3 class="category-title">Ekspresy ciśnieniowe</h3>
-            <div class="dark-grid">
-              <div class="dark-tile"><span class="dark-tile-name">Jura</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">DeLonghi</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Nivona</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Saeco</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Siemens</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Sage</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Philips</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Krups</span></div>
-            </div>
-          </div>
-
-          <div class="category-wrapper">
-            <h3 class="category-title">Sprzęt Audio</h3>
-            <div class="dark-grid">
-              <div class="dark-tile"><span class="dark-tile-name">Technics</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Panasonic</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Marantz</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Onkyo</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Harman Kardon</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Sony</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">JBL</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">LG</span></div>
-              <div class="dark-tile"><span class="dark-tile-name">Samsung</span></div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="other-brands-box">
-          <h3>Obsługa pozostałych marek i producentów</h3>
-          <p>
-            Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku. Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.
-          </p>
-        </div>
-
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Marki, które obsługujemy w naszym serwisie</h2>
+        <p class="lead" style="margin: 0 auto;">Specjalizujemy się w naprawach sprzętu wiodących producentów elektroniki użytkowej oraz urządzeń domowych.</p>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div><strong>ARTIM</strong><br><span class="small">Serwis RTV, TV, audio i małe AGD we Wrocławiu</span></div>
-      <div class="small">
-        <div>Telefon: <a href="tel:+48601159066">601 159 066</a></div>
-        <div>Adres: Grabiszyńska 241F, Wrocław</div>
+      <div class="category-wrapper">
+        <h3 class="category-title">Telewizory</h3>
+        <div class="brand-grid">
+          <div class="brand-box"><span>Panasonic</span><small>(autoryzacja)</small></div>
+          <div class="brand-box"><span>LG</span></div>
+          <div class="brand-box"><span>Samsung</span></div>
+          <div class="brand-box"><span>Sony</span></div>
+          <div class="brand-box"><span>Hisense</span></div>
+          <div class="brand-box"><span>TCL</span></div>
+        </div>
+      </div>
+
+      <div class="category-wrapper">
+        <h3 class="category-title">Ekspresy ciśnieniowe</h3>
+        <div class="brand-grid">
+          <div class="brand-box"><span>Jura</span></div>
+          <div class="brand-box"><span>DeLonghi</span></div>
+          <div class="brand-box"><span>Nivona</span></div>
+          <div class="brand-box"><span>Saeco</span></div>
+          <div class="brand-box"><span>Siemens</span></div>
+          <div class="brand-box"><span>Sage</span></div>
+          <div class="brand-box"><span>Philips</span></div>
+          <div class="brand-box"><span>Krups</span></div>
+        </div>
+      </div>
+
+      <div class="category-wrapper">
+        <h3 class="category-title">Sprzęt Audio</h3>
+        <div class="brand-grid">
+          <div class="brand-box"><span>Technics</span></div>
+          <div class="brand-box"><span>Panasonic</span></div>
+          <div class="brand-box"><span>Marantz</span></div>
+          <div class="brand-box"><span>Onkyo</span></div>
+          <div class="brand-box"><span>Harman Kardon</span></div>
+          <div class="brand-box"><span>Sony</span></div>
+          <div class="brand-box"><span>JBL</span></div>
+          <div class="brand-box"><span>LG</span></div>
+          <div class="brand-box"><span>Samsung</span></div>
+        </div>
+      </div>
+
+      <div class="other-brands-box">
+        <h3>Obsługa pozostałych marek i producentów</h3>
+        <p>Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku.</p>
       </div>
     </div>
-  </footer>
+  </main>
 </body>
 </html>
