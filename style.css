@@ -17,10 +17,11 @@ h2 { font-size: clamp(28px, 3.5vw, 40px); font-weight: 700; letter-spacing: -0.0
 h3 { font-size: clamp(18px, 2vw, 24px); font-weight: 700; }
 p { margin: 0 0 16px; color: var(--muted); font-size: 16px; }
 .lead { font-size: clamp(17px, 1.8vw, 19px); max-width: 760px; color: var(--muted); }
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border-radius: 8px; font-weight: 700; cursor: pointer; border: none; }
 .btn-primary { background: var(--brand); color: #ffffff; }
-.btn-secondary { background: #ffffff; color: var(--text); border: 1px solid #cbd5e1; }
 .topbar { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--line); }
 .topbar-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; }
 .brand { display: flex; align-items: center; gap: 14px; }
@@ -31,14 +32,12 @@ p { margin: 0 0 16px; color: var(--muted); font-size: 16px; }
 .footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--muted); background-color: #f8fafc; }
 .footer-inner { display: flex; justify-content: space-between; }
 
-/* JEDYNY, CZYSTY STYL DLA MAREK */
+/* STYL DLA MAREK (Wklejony na koniec) */
 .category-wrapper { margin-bottom: 40px; }
 .category-title { font-size: 1.4rem; font-weight: 800; color: #111; margin-bottom: 20px; border-left: 4px solid #0a4693; padding-left: 15px; }
 .brand-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
-.brand-box { background: #111; color: #fff; padding: 20px 10px; border-radius: 8px; text-align: center; display: flex; flex-direction: column; justify-content: center; min-height: 80px; font-weight: 700; transition: transform 0.2s; }
-.brand-box:hover { transform: translateY(-5px); background: #000; }
+.brand-box { background: #111; color: #fff; padding: 20px 10px; border-radius: 8px; text-align: center; display: flex; flex-direction: column; justify-content: center; min-height: 80px; font-weight: 700; border: 2px solid #333; transition: all 0.2s; }
+.brand-box:hover { transform: translateY(-5px); border-color: #0a4693; }
 .brand-box span { font-size: 0.95rem; }
 .brand-box small { display: block; font-size: 0.7rem; color: #DB0E15; margin-top: 4px; }
 .other-brands-box { background: #f8fafc; padding: 30px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: center; margin-top: 40px; }
-.other-brands-box h3 { font-size: 1.25rem; margin-bottom: 16px; color: #000; }
-.other-brands-box p { margin: 0 auto; color: #555; font-size: 1rem; line-height: 1.7; max-width: 800px; }
