@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <title>Marki</title>
-<link rel="icon" type="image/jpeg" href="icon.jpg">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serwisowane Marki — Artim</title>
+  <title>Artim - Marki</title>
+  <link rel="icon" type="image/jpeg" href="icon.jpg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="index.html" class="brand"><img src="logo.jpg" alt="Artim Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px; margin-right: 12px;"><div class="brand-copy"><div class="brand-title">ARTIM</div><div class="brand-sub">Autoryzowany Serwis Panasonic</div></div></a>
-        
+      <a href="index.html" class="brand">
+        <img src="logo.jpg" alt="Artim Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px; margin-right: 12px;">
+        <div class="brand-copy">
+          <div class="brand-title">ARTIM</div>
+          <div class="brand-sub">Autoryzowany Serwis Panasonic — RTV, TV, audio i małe AGD</div>
+        </div>
+      </a>
       <nav class="nav">
         <div class="nav-links">
           <a href="o-serwisie.html">O serwisie</a>
-          <a href="marki.html" style="color: var(--brand);">Marki</a>
+          <a href="marki.html" style="color: var(--brand, #DB0E15);">Marki</a>
           <a href="uslugi.html">Usługi</a>
           <a href="proces.html">Proces</a>
           <a href="faq.html">FAQ</a>
@@ -30,51 +34,62 @@
   <main>
     <section class="section">
       <div class="container">
-        <div class="highlight-box">
+        
+        <div class="section-head">
           <h2>Marki, które obsługujemy w naszym serwisie</h2>
-          <p>Specjalizujemy się w naprawach sprzętu wiodących producentów elektroniki użytkowej oraz urządzeń domowych.</p>
-
-          <h3 style="margin-top: 40px; margin-bottom: 12px; color: var(--text);">Telewizory</h3>
-          <div class="brands">
-            <span class="brand-chip">Panasonic<br>(autoryzacja)</span>
-            <span class="brand-chip">LG</span>
-            <span class="brand-chip">Samsung</span>
-            <span class="brand-chip">Sony</span>
-            <span class="brand-chip">Hisense</span>
-            <span class="brand-chip">TCL</span>
-          </div>
-
-          <h3 style="margin-top: 40px; margin-bottom: 12px; color: var(--text);">Ekspresy ciśnieniowe</h3>
-          <div class="brands">
-            <span class="brand-chip">Jura</span>
-            <span class="brand-chip">DeLonghi</span>
-            <span class="brand-chip">Nivona</span>
-            <span class="brand-chip">Saeco</span>
-            <span class="brand-chip">Siemens</span>
-            <span class="brand-chip">Sage</span>
-            <span class="brand-chip">Philips</span>
-            <span class="brand-chip">Krups</span>
-          </div>
-
-          <h3 style="margin-top: 40px; margin-bottom: 12px; color: var(--text);">Sprzęt Audio</h3>
-          <div class="brands" style="margin-bottom: 40px;">
-            <span class="brand-chip">Technics</span>
-            <span class="brand-chip">Panasonic</span>
-            <span class="brand-chip">Marantz</span>
-            <span class="brand-chip">Onkyo</span>
-            <span class="brand-chip">Harman Kardon</span>
-            <span class="brand-chip">Sony</span>
-            <span class="brand-chip">JBL</span>
-            <span class="brand-chip">LG</span>
-            <span class="brand-chip">Samsung</span>
-          </div>
-
-          <div style="margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--line);">
-            <h4 style="margin: 0 0 8px; font-size: 18px; color: var(--text);">Obsługa pozostałych marek i producentów</h4>
-            <p style="margin: 0; font-size: 15px; color: var(--muted);">Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. <strong>Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku.</strong> Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.</p>
-          </div>
-
         </div>
+        <p class="lead" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+          Specjalizujemy się w naprawach sprzętu wiodących producentów elektroniki użytkowej oraz urządzeń domowych.
+        </p>
+
+        <div class="category-block">
+          <h3 class="category-title">Telewizory</h3>
+          <div class="brands-grid">
+            <div class="brand-tile"><span class="brand-name">Panasonic</span><span class="brand-subtext">(autoryzacja)</span></div>
+            <div class="brand-tile"><span class="brand-name">LG</span></div>
+            <div class="brand-tile"><span class="brand-name">Samsung</span></div>
+            <div class="brand-tile"><span class="brand-name">Sony</span></div>
+            <div class="brand-tile"><span class="brand-name">Hisense</span></div>
+            <div class="brand-tile"><span class="brand-name">TCL</span></div>
+          </div>
+        </div>
+
+        <div class="category-block">
+          <h3 class="category-title">Ekspresy ciśnieniowe</h3>
+          <div class="brands-grid">
+            <div class="brand-tile"><span class="brand-name">Jura</span></div>
+            <div class="brand-tile"><span class="brand-name">DeLonghi</span></div>
+            <div class="brand-tile"><span class="brand-name">Nivona</span></div>
+            <div class="brand-tile"><span class="brand-name">Saeco</span></div>
+            <div class="brand-tile"><span class="brand-name">Siemens</span></div>
+            <div class="brand-tile"><span class="brand-name">Sage</span></div>
+            <div class="brand-tile"><span class="brand-name">Philips</span></div>
+            <div class="brand-tile"><span class="brand-name">Krups</span></div>
+          </div>
+        </div>
+
+        <div class="category-block">
+          <h3 class="category-title">Sprzęt Audio</h3>
+          <div class="brands-grid">
+            <div class="brand-tile"><span class="brand-name">Technics</span></div>
+            <div class="brand-tile"><span class="brand-name">Panasonic</span></div>
+            <div class="brand-tile"><span class="brand-name">Marantz</span></div>
+            <div class="brand-tile"><span class="brand-name">Onkyo</span></div>
+            <div class="brand-tile"><span class="brand-name">Harman Kardon</span></div>
+            <div class="brand-tile"><span class="brand-name">Sony</span></div>
+            <div class="brand-tile"><span class="brand-name">JBL</span></div>
+            <div class="brand-tile"><span class="brand-name">LG</span></div>
+            <div class="brand-tile"><span class="brand-name">Samsung</span></div>
+          </div>
+        </div>
+
+        <div class="other-brands-card">
+          <h3>Obsługa pozostałych marek i producentów</h3>
+          <p>
+            Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku. Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.
+          </p>
+        </div>
+
       </div>
     </section>
   </main>
