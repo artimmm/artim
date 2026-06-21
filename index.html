@@ -1,82 +1,158 @@
-<section class="section">
-  <div class="container">
-    
-    <div class="section-head" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 30px; margin-bottom: 40px;">
-      <div>
-        <h2>Co mówią o nas klienci</h2>
-      </div>
-      
-      <!-- Blok oceny po prawej stronie -->
-      <div class="card" style="padding: 16px 24px; min-width: 220px;">
-        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
-          <div style="font-size: 32px; font-weight: 800; line-height: 1;">4.5</div>
-          <div style="color: #fbbc04; font-size: 16px;">★★★★<span style="color: #e2e8f0;">★</span></div>
-        </div>
-        <div style="font-size: 12px; color: var(--muted);">Na podstawie opinii w Google</div>
-      </div>
-    </div>
-    
-    <div class="grid grid-4">
-      
-      <!-- E. R. -->
-      <article class="card" style="padding: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div style="display: flex; gap: 12px; align-items: center;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #673ab7; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">E</div>
-            <div><strong style="display: block; font-size: 15px;">Ewa R.</strong><span style="font-size: 13px; color: var(--muted);">miesiąc temu</span></div>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
-        </div>
-        <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
-        <p style="font-size: 14px; color: var(--text);">Bardzo polecam -mega uprzejmi ludzie począwszy od infolinii-super pomoc-super realizacja-super komunikacja-sprawne wnikliwie dzialanie-brawo.💪...</p>
-      </article>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- NAPIS NA KARCIE PRZEGLĄDARKI -->
+  <title>Artim</title>
+  
+  <!-- IKONKA NA KARCIE PRZEGLĄDARKI -->
+  <link rel="icon" type="image/jpeg" href="icon.jpg">
 
-      <!-- Piotr W. -->
-      <article class="card" style="padding: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div style="display: flex; gap: 12px; align-items: center;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #607d8b; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">P</div>
-            <div><strong style="display: block; font-size: 15px;">Piotr W.</strong><span style="font-size: 13px; color: var(--muted);">rok temu</span></div>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <!-- LOGO NA STRONIE -->
+        <img src="logo.jpg" alt="Artim Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px;">
+        <div class="brand-copy">
+          <div class="brand-title">ARTIM</div>
+          <div class="brand-sub">Autoryzowany Serwis Panasonic — RTV, TV, audio i małe AGD</div>
         </div>
-        <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
-        <p style="font-size: 14px; color: var(--text);">Polecam, fachowe podejście do problemu i rzetelna wycena. Pełna satysfakcja z naprawy kina domowego.👍...</p>
-      </article>
-
-      <!-- Ala Z. -->
-      <article class="card" style="padding: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div style="display: flex; gap: 12px; align-items: center;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #e91e63; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">A</div>
-            <div><strong style="display: block; font-size: 15px;">Ala Z.</strong><span style="font-size: 13px; color: var(--muted);">rok temu</span></div>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
-        </div>
-        <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
-        <p style="font-size: 14px; color: var(--text);">Bardzo polecam Artim! Do Artim trafiłam z zepsutym telewizorem. Wszystko przebiegło bardzo dobrze, komunikacja super , merytorycznie i profesjonalnie :) Firma uczciwa.</p>
-      </article>
-
-      <!-- Hbx -->
-      <article class="card" style="padding: 24px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-          <div style="display: flex; gap: 12px; align-items: center;">
-            <div style="width: 40px; height: 40px; border-radius: 50%; background: #212121; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">H</div>
-            <div><strong style="display: block; font-size: 15px;">Hbx</strong><span style="font-size: 13px; color: var(--muted);">rok temu</span></div>
-          </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
-        </div>
-        <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
-        <p style="font-size: 14px; color: var(--text);">Mega polecam serwis Artim! Ogromny plus za darmową wycenę. Oddałem ekspres do kawy, który kosztował ponad 2k a w innym serwisie powiedzieli, że naprawa się nie opłaca. Tutaj wszystko ogarnęli szybko i w sensownej cenie.</p>
-      </article>
-
-    </div>
-
-    <div style="text-align: center; margin-top: 48px;">
-      <a href="https://www.google.com/maps/place/Artim+-+Serwis+RTV+%2F+Panasonic+%2F+Technics+%2F+LG+%2F+Samsung+%2FEkspresy+ci%C5%9Bnieniowe+do+kawy/@51.0969714,16.9823447,17z/data=!4m8!3m7!1s0x470fc18b3bf2ea5d:0x2e398857a7fdf902!8m2!3d51.0969714!4d16.9823447!9m1!1b1!16s%2Fg%2F11byxfs7rj?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary" style="background: white; border: 1px solid #cbd5e1; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); font-size: 16px; padding: 16px 32px; border-radius: 8px; font-weight: 700;">
-        Sprawdź opinie bezpośrednio w Google Maps
       </a>
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="o-serwisie.html">O serwisie</a>
+          <a href="marki.html">Marki</a>
+          <a href="uslugi.html">Usługi</a>
+          <a href="proces.html">Proces</a>
+          <a href="faq.html">FAQ</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <a class="btn btn-primary nav-phone" href="tel:+48601159066">Zadzwoń: 601 159 066</a>
+      </nav>
     </div>
+  </header>
 
-  </div>
-</section>
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="hero-copy">
+          <h1>Autoryzowany serwis Panasonic we Wrocławiu.</h1>
+          <p class="lead">Artim to autoryzowany serwis Panasonic oraz serwis RTV, sprzętu audio, małego AGD i ekspresów ciśnieniowych do kawy. Przyjmujemy zgłoszenia telefonicznie i mailowo.</p>
+          <div class="hero-points">
+            <div class="hero-point">Darmowa wycena</div>
+            <div class="hero-point">Wrocław — Grabiszyńska 241F</div>
+            <div class="hero-point">Kontakt telefoniczny i mailowy</div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="tel:+48601159066">Zadzwoń teraz</a>
+            <a class="btn btn-secondary" href="uslugi.html">Zobacz ofertę usług</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="card hero-main-card">
+            <h3>Profesjonalne Naprawy</h3>
+            <p>Obsługujemy telewizory, sprzęt audio, małe AGD oraz ekspresy ciśnieniowe do kawy różnych marek ze szczególnym uwzględnieniem autoryzacji Panasonic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        
+        <div class="section-head" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 30px; margin-bottom: 40px;">
+          <div>
+            <h2>Co mówią o nas klienci</h2>
+          </div>
+          
+          <!-- Blok oceny po prawej stronie -->
+          <div class="card" style="padding: 16px 24px; min-width: 220px;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 4px;">
+              <div style="font-size: 32px; font-weight: 800; line-height: 1;">4.5</div>
+              <div style="color: #fbbc04; font-size: 16px;">★★★★<span style="color: #e2e8f0;">★</span></div>
+            </div>
+            <div style="font-size: 12px; color: var(--muted);">Na podstawie opinii w Google</div>
+          </div>
+        </div>
+        
+        <div class="grid grid-4">
+          
+          <!-- E. R. -->
+          <article class="card" style="padding: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #673ab7; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">E</div>
+                <div><strong style="display: block; font-size: 15px;">Ewa R.</strong><span style="font-size: 13px; color: var(--muted);">miesiąc temu</span></div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
+            </div>
+            <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
+            <p style="font-size: 14px; color: var(--text);">Bardzo polecam -mega uprzejmi ludzie począwszy od infolinii-super pomoc-super realizacja-super komunikacja-sprawne wnikliwie dzialanie-brawo.💪...</p>
+          </article>
+
+          <!-- Piotr W. -->
+          <article class="card" style="padding: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #607d8b; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">P</div>
+                <div><strong style="display: block; font-size: 15px;">Piotr W.</strong><span style="font-size: 13px; color: var(--muted);">rok temu</span></div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
+            </div>
+            <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
+            <p style="font-size: 14px; color: var(--text);">Polecam, fachowe podejście do problemu i rzetelna wycena. Pełna satysfakcja z naprawy kina domowego.👍...</p>
+          </article>
+
+          <!-- Ala Z. -->
+          <article class="card" style="padding: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e91e63; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">A</div>
+                <div><strong style="display: block; font-size: 15px;">Ala Z.</strong><span style="font-size: 13px; color: var(--muted);">rok temu</span></div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
+            </div>
+            <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
+            <p style="font-size: 14px; color: var(--text);">Bardzo polecam Artim! Do Artim trafiłam z zepsutym telewizorem. Wszystko przebiegło bardzo dobrze, komunikacja super , merytorycznie i profesjonalnie :) Firma uczciwa.</p>
+          </article>
+
+          <!-- Hbx -->
+          <article class="card" style="padding: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #212121; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">H</div>
+                <div><strong style="display: block; font-size: 15px;">Hbx</strong><span style="font-size: 13px; color: var(--muted);">rok temu</span></div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18" alt="Google">
+            </div>
+            <div style="color: #fbbc04; font-size: 16px; margin-bottom: 8px;">★★★★★</div>
+            <p style="font-size: 14px; color: var(--text);">Mega polecam serwis Artim! Ogromny plus za darmową wycenę. Oddałem ekspres do kawy, który kosztował ponad 2k a w innym serwisie powiedzieli, że naprawa się nie opłaca. Tutaj wszystko ogarnęli szybko i w sensownej cenie.</p>
+          </article>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="https://www.google.com/maps/place/Artim+-+Serwis+RTV+%2F+Panasonic+%2F+Technics+%2F+LG+%2F+Samsung+%2FEkspresy+ci%C5%9Bnieniowe+do+kawy/@51.0969714,16.9823447,17z/data=!4m8!3m7!1s0x470fc18b3bf2ea5d:0x2e398857a7fdf902!8m2!3d51.0969714!4d16.9823447!9m1!1b1!16s%2Fg%2F11byxfs7rj?entry=ttu" target="_blank" rel="noopener" class="btn btn-secondary" style="background: white; border: 1px solid #cbd5e1; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); font-size: 16px; padding: 16px 32px; border-radius: 8px; font-weight: 700;">
+            Sprawdź opinie bezpośrednio w Google Maps
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>ARTIM</strong><br><span class="small">Serwis RTV, TV, audio i małe AGD we Wrocławiu</span></div>
+      <div class="small">
+        <div>Telefon: <a href="tel:+48601159066">601 159 066</a></div>
+        <div>Adres: Grabiszyńska 241F, Wrocław</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
