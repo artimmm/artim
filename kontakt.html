@@ -1,61 +1,70 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontakt i lokalizacja — Serwis Artim</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Artim Serwis Elektroniki</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a href="index.html" class="brand"><div class="brand-mark">A</div><div class="brand-copy"><div class="brand-title">ARTIM</div><div class="brand-sub">Autoryzowany Serwis Panasonic</div></div></a>
-      <nav class="nav">
-        <div class="nav-links">
-          <a href="o-serwisie.html">O serwisie</a>
-          <a href="marki.html">Marki</a>
-          <a href="uslugi.html">Usługi</a>
-          <a href="proces.html">Proces</a>
-          <a href="faq.html">FAQ</a>
-          <a href="kontakt.html" style="color: var(--brand);">Kontakt</a>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">ARTIM<span>serwis</span></a>
+            <ul class="nav-menu">
+                <li><a href="o-firmie.html">O firmie</a></li>
+                <li><a href="oferta.html">Oferta</a></li>
+                <li><a href="proces.html">Proces serwisu</a></li>
+                <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            </ul>
         </div>
-        <a class="btn btn-primary nav-phone" href="tel:+48601159066">601 159 066</a>
-      </nav>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <h2>Kontakt z serwisem i mapa dojazdu</h2>
-        </div>
+    <main>
+        <h2 class="section-title">Skontaktuj się z Nami</h2>
+        <p class="section-subtitle">Odwiedź nasz serwis, zadzwoń lub wyślij wiadomość.</p>
+        
         <div class="contact-grid">
-          <div class="card contact-card">
-            <h3>ARTIM Wrocław</h3>
-            <div class="contact-box">
-              <div class="contact-item"><span class="contact-label">Telefon</span><div class="contact-value"><a class="link" href="tel:+48601159066">601 159 066</a></div></div>
-              <div class="contact-item"><span class="contact-label">E-mail</span><div class="contact-value"><a class="link" href="mailto:serwis@artim.net.pl">serwis@artim.net.pl</a></div></div>
-              <div class="contact-item"><span class="contact-label">Adres</span><div class="contact-value">Grabiszyńska 241F, 53-234 Wrocław</div></div>
-              <div class="contact-item"><span class="contact-label">Godziny otwarcia</span><div class="contact-value">pon.–pt. 11:00–17:00</div></div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <h4>Adres Serwisu</h4>
+                    <p>Wrocław, Polska</p>
+                </div>
+                <div class="info-item">
+                    <h4>Godziny Otwarcia</h4>
+                    <p>Poniedziałek - Piątek: 09:00 - 17:00</p>
+                </div>
+                <div class="info-item">
+                    <h4>Telefon</h4>
+                    <p>+48 XXX XXX XXX</p>
+                </div>
+                <div class="info-item">
+                    <h4>E-mail</h4>
+                    <p>kontakt@artim-serwis.pl</p>
+                </div>
             </div>
-          </div>
-          <div class="map-wrap">
-            <iframe src="https://www.google.com/maps?q=Grabiszy%C5%84ska%20241F%2C%2053-234%20Wroc%C5%82aw&output=embed" loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div><strong>ARTIM</strong><br><span class="small">Serwis RTV, TV, audio i małe AGD we Wrocławiu</span></div>
-      <div class="small">
-        <div>Telefon: <a href="tel:+48601159066">601 159 066</a></div>
-        <div>Adres: Grabiszyńska 241F, Wrocław</div>
-      </div>
-    </div>
-  </footer>
+            <div class="contact-form">
+                <form action="#">
+                    <div class="form-group">
+                        <label>Imię i Nazwisko / Firma</label>
+                        <input type="text" class="form-control" placeholder="np. Jan Kowalski" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Numer telefonu</label>
+                        <input type="tel" class="form-control" placeholder="np. 123 456 789" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Opis usterki i model</label>
+                        <textarea class="form-control" rows="4" placeholder="np. Panasonic SA-HE75 - nie włącza się" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Wyślij zgłoszenie</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ARTIM Serwis Elektroniki Wrocław. Wszystkie prawa zastrzeżone.</p>
+    </footer>
 </body>
 </html>
