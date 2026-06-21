@@ -278,7 +278,7 @@ p {
 
 
 /* ==========================================================================
-   ODIZOLOWANE STYLE DLA PODSTRONY MARKI (JASNY, SPÓJNY STYL STRONY)
+   ODIZOLOWANE STYLE DLA PODSTRONY MARKI (Wersja z mocnymi, wyraźnymi ramkami)
    ========================================================================== */
 .brands-page-container {
   margin-top: 10px;
@@ -297,7 +297,7 @@ p {
 }
 .brands-cat-title::after {
   content: "";
-  height: 1px;
+  height: 2px; /* Pogrubiona linia obok tytułu kategorii */
   flex: 1;
   background-color: var(--line);
 }
@@ -307,8 +307,8 @@ p {
   gap: 16px;
 }
 .brands-light-card {
-  background-color: var(--card, #ffffff); /* Czysta biel tła kafelka */
-  border: 1px solid #cbd5e1; /* Estetyczna, widoczna szara ramka */
+  background-color: var(--card, #ffffff);
+  border: 2px solid #64748b; /* GRUBA I WYRAŹNA SZARA RAMKA */
   border-radius: var(--radius);
   padding: 24px 16px;
   display: flex;
@@ -317,23 +317,23 @@ p {
   justify-content: center;
   text-align: center;
   min-height: 96px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02); /* Bardzo delikatny, płaski cień */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* Wyraźny cień odrywający kafelek od tła */
   transition: all 0.2s ease;
 }
 .brands-light-card:hover {
-  transform: translateY(-4px); /* Lekkie uniesienie */
-  border-color: var(--brand, #0a4693); /* Podświetlenie ramki firmowym kolorem */
-  box-shadow: 0 10px 20px -5px rgba(10, 70, 147, 0.15); /* Niebieska poświata */
+  transform: translateY(-4px);
+  border-color: var(--brand, #0a4693);
+  box-shadow: 0 10px 20px -5px rgba(10, 70, 147, 0.25); /* Mocniejsze firmowe podświetlenie */
 }
 .brands-card-name {
-  color: var(--text, #0f172a); /* Ciemny, wyraźny napis */
+  color: var(--text, #0f172a);
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .brands-card-tag {
-  color: #DB0E15; /* Czerwony akcent Artim (Panasonic) */
+  color: #DB0E15;
   font-size: 11px;
   font-weight: 700;
   margin-top: 6px;
@@ -342,7 +342,7 @@ p {
 }
 .brands-notice-box {
   background-color: var(--card-strong, #f1f5f9);
-  border: 1px solid var(--line, #e2e8f0);
+  border: 2px solid #cbd5e1; /* Pogrubiona ramka dolnej informacji */
   border-radius: var(--radius);
   padding: 32px;
   margin-top: 56px;
