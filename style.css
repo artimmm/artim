@@ -1,40 +1,320 @@
+/* Główne zmienne i style resetujące */
 :root {
-  --bg: #f8fafc; --bg-soft: #ffffff; --card: #ffffff; --card-strong: #f1f5f9;
-  --line: #e2e8f0; --text: #0f172a; --muted: #475569; --brand: #0a4693;
-  --brand-2: #1d4ed8; --accent: #16a34a; --white: #ffffff;
-  --shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
-  --radius: 12px; --max: 1240px;
+  --brand: #DB0E15; /* Główny czerwony kolor z logo Artim */
+  --dark: #141414;
+  --light: #f8f9fa;
+  --text: #333333;
+  --border: #e0e0e0;
 }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
-.container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-.section { padding: 80px 0; background-color: var(--bg-soft); }
-h1, h2, h3 { margin: 0 0 16px; line-height: 1.2; color: var(--text); }
-h1 { font-size: 56px; font-weight: 800; }
-h2 { font-size: 40px; font-weight: 700; }
-h3 { font-size: 24px; font-weight: 700; }
-p { margin: 0 0 16px; color: var(--muted); font-size: 16px; }
-.lead { font-size: 19px; max-width: 760px; color: var(--muted); }
-.topbar { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--line); }
-.topbar-inner { min-height: 84px; display: flex; align-items: center; justify-content: space-between; }
-.brand { display: flex; align-items: center; gap: 14px; }
-.brand-title { font-weight: 800; font-size: 20px; color: var(--text); }
-.brand-sub { color: var(--muted); font-size: 12px; }
-.nav-links { display: flex; gap: 20px; font-weight: 600; font-size: 15px; }
-.nav-links a:hover { color: var(--brand); }
-.footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--muted); background-color: #f8fafc; }
 
-/* CZYSTY STYL DLA MAREK */
-.category-wrapper { margin-bottom: 50px; }
-.category-title { font-size: 1.4rem; font-weight: 800; color: #111; margin-bottom: 25px; border-left: 5px solid var(--brand); padding-left: 15px; }
-.brand-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
-.brand-box { 
-    background: #111; color: #fff; padding: 20px; border-radius: 8px; 
-    text-align: center; display: flex; flex-direction: column; justify-content: center; 
-    min-height: 90px; font-weight: 700; border: 2px solid #333; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.brand-box span { font-size: 0.95rem; }
-.brand-box small { display: block; font-size: 0.7rem; color: #DB0E15; margin-top: 5px; }
-.other-brands-box { background: #fff; padding: 30px; border-radius: 12px; border: 1px solid var(--line); text-align: center; margin-top: 40px; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Górny pasek nawigacji (Topbar) */
+.topbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  color: #666666;
+  margin-top: 2px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #444444;
+}
+
+.nav-links a:hover {
+  color: var(--brand);
+}
+
+/* Przyciski */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--brand);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #b80a10;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Główny układ sekcji i podstron */
+.section {
+  padding: 60px 0;
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-head h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Stopka */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  margin-top: 60px;
+  color: #555555;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* Sekcja Hero (Strona Główna) */
+.hero {
+  background-color: #fcfcfc;
+  padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.hero-copy p {
+  margin-bottom: 30px;
+}
+
+.hero-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.hero-point {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.hero-point::before {
+  content: "✓";
+  color: var(--brand);
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.btn-row {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.hero-main-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Opinie klientów */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-rating {
+  color: #ffc107;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.review-card p {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  color: #444444;
+}
+
+/* ==========================================================================
+   NOWA SEKCJA: KAFELKI MAREK (STYLIZOWANE NA WZÓR - ELEGANCKA CZERŃ)
+   ========================================================================== */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.brand-tile {
+  background-color: #1a1a1a; /* Bardzo ciemne eleganckie tło */
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;       /* Wyraźnie zaokrąglone rogi */
+  aspect-ratio: 1 / 1;       /* Idealnie kwadratowy kształt */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Delikatne podświetlenie markowym czerwonym kolorem po najechaniu */
+.brand-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand);
+  box-shadow: 0 4px 12px rgba(219, 14, 21, 0.15);
+}
+
+.brand-tile h3 {
+  color: #ffffff;            /* Kontrastowy biały napis na ciemnym tle */
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.brand-tile p {
+  color: #a0a0a0;            /* Szary, stonowany podpis */
+  font-size: 0.85rem;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+  .hero-wrap { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .topbar-inner { height: auto; padding: 15px 20px; flex-direction: column; gap: 15px; }
+  .nav { flex-direction: column; gap: 15px; width: 100%; }
+  .nav-links { flex-wrap: wrap; justify-content: center; }
+  .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+}
+
+@media (max-width: 576px) {
+  .grid-4 { grid-template-columns: 1fr; }
+  .hero-copy h1 { font-size: 2.2rem; }
+  .btn-row { flex-direction: column; }
+}
