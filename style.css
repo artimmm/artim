@@ -272,3 +272,104 @@ p {
   .brands { grid-template-columns: repeat(2, 1fr); }
   .brand-chip { height: 60px; font-size: 14px; padding: 10px; }
 }
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ODIZOLOWANE STYLE DLA PODSTRONY MARKI (BEZPIECZNE DLA RESZTY STRONY)
+   ========================================================================== */
+.brands-page-container {
+  margin-top: 10px;
+}
+.brands-cat-block {
+  margin-bottom: 48px;
+}
+.brands-cat-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.brands-cat-title::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background-color: var(--line);
+}
+.brands-premium-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+.brands-premium-card {
+  background-color: #121214; /* Głęboka, luksusowa czerń z Twojego wzoru */
+  border: 1px solid #27272a;   /* Wyraźna, schludna ramka wokół każdego kafla */
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 96px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.brands-premium-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand); /* Subtelne podświetlenie Twoim kolorem firmowym */
+  box-shadow: 0 10px 20px -8px rgba(10, 70, 147, 0.3);
+}
+.brands-card-name {
+  color: #ffffff; /* Wyrazisty biały tekst */
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.brands-card-tag {
+  color: #ff3333; /* Czerwony, profesjonalny akcent dla autoryzacji */
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.brands-notice-box {
+  background-color: var(--card-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px;
+  margin-top: 56px;
+}
+.brands-notice-box h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+.brands-notice-box p {
+  margin-bottom: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+@media (max-width: 576px) {
+  .brands-premium-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dokładnie 2 kafelki w rzędzie na telefonie */
+    gap: 12px;
+  }
+  .brands-premium-card {
+    min-height: 80px;
+    padding: 16px 8px;
+  }
+  .brands-card-name {
+    font-size: 14px;
+  }
+}
