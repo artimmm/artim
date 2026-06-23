@@ -55,16 +55,6 @@
       margin-bottom: 24px;
     }
 
-    /* Grupa trzymająca tytuł i opis - wymusza równe ustawienie list poniżej */
-    .text-group {
-      display: block;
-    }
-    @media (min-width: 1200px) {
-      .text-group {
-        min-height: 220px; 
-      }
-    }
-
     .premium-card h3 {
       font-size: 22px;
       color: #0f172a;
@@ -78,6 +68,16 @@
       line-height: 1.5;
       color: #475569;
       margin-bottom: 24px;
+    }
+
+    /* Wymuszenie IDEALNIE równej linii dla każdego elementu na dużych ekranach */
+    @media (min-width: 1200px) {
+      .premium-card h3 {
+        height: 56px; /* Zawsze zajmie miejsce 2 linijek */
+      }
+      .premium-card p.desc {
+        height: 84px; /* Zawsze zajmie miejsce 4 linijek */
+      }
     }
 
     .premium-list {
@@ -139,13 +139,10 @@
       
       <div class="services-grid">
         
-        <!-- 1. TV -->
         <article class="premium-card">
           <div class="icon-box">TV</div>
-          <div class="text-group">
-            <h3>Serwis TV</h3>
-            <p class="desc">Naprawa telewizorów plazmowych, LCD, LED, OLED.</p>
-          </div>
+          <h3>Serwis TV</h3>
+          <p class="desc">Naprawa telewizorów plazmowych, LCD, LED, OLED.</p>
           <ul class="premium-list">
             <li>Wymiana listew LED</li>
             <li>Naprawa płyt głównych</li>
@@ -156,13 +153,10 @@
           </ul>
         </article>
 
-        <!-- 2. Audio -->
         <article class="premium-card">
           <div class="icon-box">&#9834;</div>
-          <div class="text-group">
-            <h3>Serwis Audio</h3>
-            <p class="desc">Przywracamy sprawność sprzętu audio domowego i przenośnego.</p>
-          </div>
+          <h3>Serwis Audio</h3>
+          <p class="desc">Przywracamy sprawność sprzętu audio domowego i przenośnego.</p>
           <ul class="premium-list">
             <li>Naprawa wzmacniaczy Hi-Fi</li>
             <li>Naprawa sprzętu CD, DVD</li>
@@ -174,13 +168,10 @@
           </ul>
         </article>
 
-        <!-- 3. Ekspresy do kawy -->
         <article class="premium-card">
           <div class="icon-box">&#9749;</div>
-          <div class="text-group">
-            <h3>Serwis ekspresów do kawy</h3>
-            <p class="desc">Profesjonalna i szybka naprawa ekspresów do kawy wszystkich znanych marek.</p>
-          </div>
+          <h3>Serwis ekspresów do kawy</h3>
+          <p class="desc">Profesjonalna i szybka naprawa ekspresów do kawy wszystkich znanych marek.</p>
           <ul class="premium-list">
             <li>Naprawa, wymiana elektroniki</li>
             <li>Naprawa, wymiana elementów mechanicznych</li>
@@ -190,13 +181,10 @@
           </ul>
         </article>
 
-        <!-- 4. Małe AGD -->
         <article class="premium-card">
           <div class="icon-box">AGD</div>
-          <div class="text-group">
-            <h3>Serwis małego AGD</h3>
-            <p class="desc">Szybka i profesjonalna naprawa drobnego sprzętu codziennego użytku.</p>
-          </div>
+          <h3>Serwis małego AGD</h3>
+          <p class="desc">Szybka i profesjonalna naprawa drobnego sprzętu codziennego użytku.</p>
           <ul class="premium-list">
             <li>Naprawa mikrofal</li>
             <li>Naprawa i montaż płyt indukcyjnych</li>
@@ -205,13 +193,10 @@
           </ul>
         </article>
 
-        <!-- 5. Części i akcesoria -->
         <article class="premium-card">
           <div class="icon-box">P</div>
-          <div class="text-group">
-            <h3>Sprzedaż części i akcesoriów</h3>
-            <p class="desc">Dobór podzespołów oraz oryginalnych akcesoriów fabrycznych Panasonic.</p>
-          </div>
+          <h3>Sprzedaż części i akcesoriów</h3>
+          <p class="desc">Dobór podzespołów oraz oryginalnych akcesoriów fabrycznych Panasonic.</p>
           <ul class="premium-list">
             <li>Sprzedaż płyt głównych</li>
             <li>Sprzedaż zasilaczy</li>
