@@ -8,29 +8,31 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    .grid-5 {
-      display: grid;
-      grid-template-columns: 1fr;
+    .services-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 24px;
-      align-items: stretch;
     }
-    @media (min-width: 768px) {
-      .grid-5 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    @media (min-width: 1200px) {
-      .grid-5 {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
-    .grid-5 .card {
-      height: 100%;
+    .services-flex .card {
       display: flex;
       flex-direction: column;
+      width: 100%;
       box-sizing: border-box;
     }
-    .grid-5 .service-list {
+    /* Dla tabletów 2 w rzędzie */
+    @media (min-width: 768px) {
+      .services-flex .card {
+        width: calc(50% - 12px);
+      }
+    }
+    /* Dla komputerów 3 w rzędzie (ostatnie 2 spadną na dół i się wyśrodkują) */
+    @media (min-width: 1100px) {
+      .services-flex .card {
+        width: calc(33.333% - 16px);
+      }
+    }
+    .services-flex .service-list {
       flex-grow: 1;
     }
   </style>
@@ -63,7 +65,7 @@
   <main class="section" style="padding-top: 40px;">
     <div class="container">
       
-      <div class="grid-5">
+      <div class="services-flex">
         
         <article class="card service-card">
           <div class="icon">TV</div>
