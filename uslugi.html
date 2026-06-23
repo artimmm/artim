@@ -74,4 +74,160 @@
     }
 
     .premium-card p.desc {
-      font
+      font-size: 14px;
+      line-height: 1.5;
+      color: #475569;
+      margin-bottom: 24px;
+    }
+
+    .premium-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px; 
+    }
+
+    .premium-list li {
+      position: relative;
+      padding-left: 28px;
+      font-size: 14px; 
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .premium-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #10b981; 
+      font-weight: 900;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand"><img src="logo.jpg" alt="Artim Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px; margin-right: 12px;"><div class="brand-copy"><div class="brand-title">ARTIM</div><div class="brand-sub">Autoryzowany Serwis Panasonic — RTV, TV, audio i małe AGD</div></div></a>
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="o-serwisie.html">O serwisie</a>
+          <a href="marki.html">Marki</a>
+          <a href="uslugi.html" style="color: var(--brand);">Usługi</a>
+          <a href="proces.html">Proces</a>
+          <a href="faq.html">FAQ</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <a class="btn btn-primary nav-phone" href="tel:+48601159066">Zadzwoń: 601 159 066</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Zakres naszych usług serwisowych</h1>
+      <p>Specjalistyczne naprawy sprzętu elektronicznego i małego AGD.</p>
+    </div>
+  </section>
+
+  <main class="section" style="padding-top: 50px; padding-bottom: 80px;">
+    <div class="container">
+      
+      <div class="services-grid">
+        
+        <article class="premium-card">
+          <div class="icon-box">TV</div>
+          <div class="text-group">
+            <h3>Serwis TV</h3>
+            <p class="desc">Naprawa telewizorów plazmowych, LCD, LED, OLED.</p>
+          </div>
+          <ul class="premium-list">
+            <li>Wymiana listew LED</li>
+            <li>Naprawa płyt głównych</li>
+            <li>Naprawa zasilaczy</li>
+            <li>Wymiana matryc</li>
+            <li>Naprawa pilotów</li>
+            <li>Wymiana głośników</li>
+          </ul>
+        </article>
+
+        <article class="premium-card">
+          <div class="icon-box">&#9834;</div>
+          <div class="text-group">
+            <h3>Serwis Audio</h3>
+            <p class="desc">Przywracamy sprawność sprzętu audio domowego i przenośnego.</p>
+          </div>
+          <ul class="premium-list">
+            <li>Naprawa wzmacniaczy Hi-Fi</li>
+            <li>Naprawa sprzętu CD, DVD</li>
+            <li>Naprawa amplitunerów</li>
+            <li>Naprawa kin domowych</li>
+            <li>Naprawa gramofonów</li>
+            <li>Naprawa soundbarów</li>
+            <li>Naprawa subwooferów</li>
+          </ul>
+        </article>
+
+        <article class="premium-card">
+          <div class="icon-box">&#9749;</div>
+          <div class="text-group">
+            <h3>Serwis ekspresów do kawy</h3>
+            <p class="desc">Profesjonalna i szybka naprawa ekspresów do kawy wszystkich znanych marek.</p>
+          </div>
+          <ul class="premium-list">
+            <li>Naprawa, wymiana elektroniki</li>
+            <li>Naprawa, wymiana elementów mechanicznych</li>
+            <li>Konserwacja</li>
+            <li>Czyszczenie</li>
+            <li>Odkamienianie</li>
+          </ul>
+        </article>
+
+        <article class="premium-card">
+          <div class="icon-box">AGD</div>
+          <div class="text-group">
+            <h3>Serwis małego AGD</h3>
+            <p class="desc">Szybka i profesjonalna naprawa drobnego sprzętu codziennego użytku.</p>
+          </div>
+          <ul class="premium-list">
+            <li>Naprawa mikrofal</li>
+            <li>Naprawa i montaż płyt indukcyjnych</li>
+            <li>Naprawa golarek elektrycznych, trymerów, depilatorów</li>
+            <li>Naprawa szczoteczek i irygatorów</li>
+          </ul>
+        </article>
+
+        <article class="premium-card">
+          <div class="icon-box">P</div>
+          <div class="text-group">
+            <h3>Sprzedaż części i akcesoriów</h3>
+            <p class="desc">Dobór podzespołów oraz oryginalnych akcesoriów fabrycznych Panasonic.</p>
+          </div>
+          <ul class="premium-list">
+            <li>Sprzedaż płyt głównych</li>
+            <li>Sprzedaż zasilaczy</li>
+            <li>Sprzedaż T-CON</li>
+            <li>Sprzedaż akcesoriów</li>
+            <li>Sprzedaż pilotów</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>ARTIM</strong><br><span class="small">Serwis RTV, TV, audio i małe AGD we Wrocławiu</span></div>
+      <div class="small">
+        <div>Telefon: <a href="tel:+48601159066">601 159 066</a></div>
+        <div>Adres: Grabiszyńska 241F, Wrocław</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
