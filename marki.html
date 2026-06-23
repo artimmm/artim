@@ -3,20 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artim - Marki</title>
+  <title>Obsługiwane Marki — Serwis Artim</title>
   <link rel="icon" type="image/jpeg" href="icon.jpg">
   <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Siatka 4-kolumnowa dla marek */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    
+    @media (min-width: 576px) {
+      .brands-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 992px) {
+      .brands-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    
+    /* Styl pojedynczej karty marki */
+    .brand-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 40px 24px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 140px;
+    }
+
+    .brand-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      border-color: #cbd5e1;
+    }
+
+    /* Nazwa marki */
+    .brand-name {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e3a8a; /* Firmowy granat/ciemnoniebieski */
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    /* Statusy (Autoryzowany vs Zwykły) */
+    .brand-status {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .brand-status.auth {
+      color: #0284c7; /* Jasnoniebieski jak na zrzucie */
+      font-weight: 600;
+    }
+
+    .brand-status.standard {
+      color: #94a3b8; /* Zgaszony, elegancki szary */
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="index.html" class="brand">
-        <img src="logo.jpg" alt="Artim Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px; margin-right: 12px;">
-        <div class="brand-copy">
-          <div class="brand-title">ARTIM</div>
-          <div class="brand-sub">Autoryzowany Serwis Panasonic — RTV, TV, audio i małe AGD</div>
-        </div>
-      </a>
+      <a href="index.html" class="brand"><img src="logo.jpg" alt="Artim Logo" style="height: 44px; width: auto; object-fit: contain; border-radius: 4px; margin-right: 12px;"><div class="brand-copy"><div class="brand-title">ARTIM</div><div class="brand-sub">Autoryzowany Serwis Panasonic — RTV, TV, audio i małe AGD</div></div></a>
       <nav class="nav">
         <div class="nav-links">
           <a href="o-serwisie.html">O serwisie</a>
@@ -33,61 +89,95 @@
 
   <section class="page-header">
     <div class="container">
-      <h1>Marki, które obsługujemy</h1>
-      <p>Specjalizujemy się w naprawach sprzętu wiodących producentów elektroniki użytkowej oraz urządzeń domowych.</p>
+      <h1>Obsługiwane marki</h1>
+      <p>Specjalizujemy się w sprzęcie Panasonic, ale skutecznie naprawiamy również urządzenia innych wiodących producentów.</p>
     </div>
   </section>
 
-  <main class="section" style="padding-top: 40px;">
+  <main class="section" style="padding-top: 50px; padding-bottom: 80px;">
     <div class="container">
       
-      <div class="brands-page-container">
+      <div class="brands-grid">
         
-        <div class="brands-cat-block">
-          <h3 class="brands-cat-title">Telewizory</h3>
-          <div class="brands-light-grid">
-            <div class="brands-light-card"><span class="brands-card-name">Panasonic</span><span class="brands-card-tag">(autoryzacja)</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">LG</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Samsung</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Sony</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Hisense</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">TCL</span></div>
-          </div>
-        </div>
+        <article class="brand-card" style="border-color: #bae6fd; box-shadow: 0 4px 10px rgba(2, 132, 199, 0.05);">
+          <div class="brand-name">Panasonic</div>
+          <div class="brand-status auth">&#10003; Autoryzowany serwis</div>
+        </article>
 
-        <div class="brands-cat-block">
-          <h3 class="brands-cat-title">Ekspresy ciśnieniowe</h3>
-          <div class="brands-light-grid">
-            <div class="brands-light-card"><span class="brands-card-name">Jura</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">DeLonghi</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Nivona</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Saeco</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Siemens</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Sage</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Philips</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Krups</span></div>
-          </div>
-        </div>
+        <article class="brand-card">
+          <div class="brand-name">Technics</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
 
-        <div class="brands-cat-block">
-          <h3 class="brands-cat-title">Sprzęt Audio</h3>
-          <div class="brands-light-grid">
-            <div class="brands-light-card"><span class="brands-card-name">Technics</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Panasonic</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Marantz</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Onkyo</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Harman Kardon</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Sony</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">JBL</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">LG</span></div>
-            <div class="brands-light-card"><span class="brands-card-name">Samsung</span></div>
-          </div>
-        </div>
+        <article class="brand-card">
+          <div class="brand-name">LG</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
 
-        <div class="brands-notice-box">
-          <h3>Obsługa pozostałych marek i producentów</h3>
-          <p>Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku. Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.</p>
-        </div>
+        <article class="brand-card">
+          <div class="brand-name">Samsung</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Hisense</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Gorenje</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Philips</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Sony</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">TCL</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Beko</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Electrolux</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Whirlpool</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Bosch</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Haier</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Candy</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
+        <article class="brand-card">
+          <div class="brand-name">Dyson</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
 
       </div>
     </div>
