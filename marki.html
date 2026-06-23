@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    /* Siatka 4-kolumnowa dla marek */
+    /* Zmodyfikowana siatka: węższe odstępy i 5 kolumn na dużych ekranach, by uniknąć przewijania */
     .brands-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 16px;
     }
     
     @media (min-width: 576px) {
@@ -21,13 +21,16 @@
     @media (min-width: 992px) {
       .brands-grid { grid-template-columns: repeat(4, 1fr); }
     }
+    @media (min-width: 1200px) {
+      .brands-grid { grid-template-columns: repeat(5, 1fr); }
+    }
     
-    /* Styl pojedynczej karty marki */
+    /* Smuklejszy styl karty */
     .brand-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
-      padding: 40px 24px;
+      padding: 24px 16px;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -35,7 +38,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 140px;
+      min-height: 100px;
     }
 
     .brand-card:hover {
@@ -46,26 +49,39 @@
 
     /* Nazwa marki */
     .brand-name {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 800;
-      color: #1e3a8a; /* Firmowy granat/ciemnoniebieski */
-      margin-bottom: 12px;
+      color: #1e3a8a; 
+      margin-bottom: 6px;
       letter-spacing: -0.5px;
     }
 
     /* Statusy (Autoryzowany vs Zwykły) */
     .brand-status {
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 500;
     }
 
     .brand-status.auth {
-      color: #0284c7; /* Jasnoniebieski status */
+      color: #0284c7; 
       font-weight: 600;
     }
 
     .brand-status.standard {
-      color: #94a3b8; /* Zgaszony szary */
+      color: #94a3b8; 
+    }
+
+    /* Estetyczny box na opis pod markami */
+    .info-box {
+      margin-top: 32px;
+      padding: 24px 32px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      text-align: center;
+      color: #334155;
+      font-size: 15px;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -94,7 +110,7 @@
     </div>
   </section>
 
-  <main class="section" style="padding-top: 50px; padding-bottom: 80px;">
+  <main class="section" style="padding-top: 40px; padding-bottom: 60px;">
     <div class="container">
       
       <div class="brands-grid">
@@ -196,7 +212,18 @@
           <div class="brand-status standard">Serwis pogwarancyjny</div>
         </article>
 
+        <article class="brand-card">
+          <div class="brand-name">Denon</div>
+          <div class="brand-status standard">Serwis pogwarancyjny</div>
+        </article>
+
       </div>
+
+      <!-- Przywrócony tekst -->
+      <div class="info-box">
+        Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku. Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.
+      </div>
+
     </div>
   </main>
 
