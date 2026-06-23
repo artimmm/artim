@@ -12,7 +12,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      align-items: stretch; /* Wyrównuje elementy do tej samej wysokości */
+      align-items: stretch;
     }
     @media (min-width: 768px) {
       .grid-5 {
@@ -25,12 +25,11 @@
       }
     }
     .grid-5 .card {
-      height: 100%; /* Wymusza wypełnienie całej dostępnej wysokości */
+      height: 100%;
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
     }
-    /* Opcjonalnie: żeby listy ładnie wypełniały puste miejsce, spychając dolne krawędzie */
     .grid-5 .service-list {
       flex-grow: 1;
     }
@@ -81,6 +80,72 @@
         </article>
 
         <article class="card service-card">
-          <div class="icon">♪</div>
+          <div class="icon">&#9834;</div>
           <h3>Serwis Audio</h3>
-          <p>
+          <p>Przywracamy sprawność sprzętu audio domowego i przenośnego.</p>
+          <ul class="service-list">
+            <li>Naprawa wzmacniaczy Hi-Fi</li>
+            <li>Naprawa sprzętu CD, DVD</li>
+            <li>Naprawa amplitunerów</li>
+            <li>Naprawa kin domowych</li>
+            <li>Naprawa gramofonów</li>
+            <li>Naprawa głośników przenośnych</li>
+            <li>Naprawa systemów Multi-room</li>
+            <li>Naprawa soundbarów</li>
+            <li>Naprawa subwooferów</li>
+            <li>Czyszczenie, konserwacja sprzętów audio</li>
+          </ul>
+        </article>
+
+        <article class="card service-card">
+          <div class="icon">&#9749;</div>
+          <h3>Serwis ekspresów do kawy</h3>
+          <p>Profesjonalna i szybka naprawa ekspresów do kawy wszystkich znanych marek</p>
+          <ul class="service-list">
+            <li>Naprawa, wymiana elektroniki</li>
+            <li>Naprawa, wymiana elementów mechanicznych</li>
+            <li>Konserwacja</li>
+            <li>Czyszczenie</li>
+            <li>Odkamienianie</li>
+          </ul>
+        </article>
+
+        <article class="card service-card">
+          <div class="icon">AGD</div>
+          <h3>Serwis małego AGD</h3>
+          <ul class="service-list">
+            <li>Naprawa mikrofal</li>
+            <li>Naprawa i montaż płyt indukcyjnych</li>
+            <li>Naprawa golarek elektrycznych, trymerów, depilatorów</li>
+            <li>Naprawa szczoteczek i irygatorów</li>
+          </ul>
+        </article>
+
+        <article class="card service-card">
+          <div class="icon">P</div>
+          <h3>Sprzedaż części i akcesoriów</h3>
+          <p>Dobór podzespołów oraz oryginalnych akcesoriów fabrycznych Panasonic.</p>
+          <ul class="service-list">
+            <li>Sprzedaż płyt głównych</li>
+            <li>Sprzedaż zasilaczy</li>
+            <li>Sprzedaż T-CON</li>
+            <li>Sprzedaż akcesoriów</li>
+            <li>Sprzedaż pilotów</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>ARTIM</strong><br><span class="small">Serwis RTV, TV, audio i małe AGD we Wrocławiu</span></div>
+      <div class="small">
+        <div>Telefon: <a href="tel:+48601159066">601 159 066</a></div>
+        <div>Adres: Grabiszyńska 241F, Wrocław</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
