@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    /* Zmodyfikowana siatka: węższe odstępy i 5 kolumn na dużych ekranach, by uniknąć przewijania */
+    /* Siatka: 5 kolumn na dużych ekranach */
     .brands-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -25,7 +25,7 @@
       .brands-grid { grid-template-columns: repeat(5, 1fr); }
     }
     
-    /* Smuklejszy styl karty */
+    /* Styl karty marki */
     .brand-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
@@ -47,7 +47,6 @@
       border-color: #cbd5e1;
     }
 
-    /* Nazwa marki */
     .brand-name {
       font-size: 20px;
       font-weight: 800;
@@ -56,7 +55,6 @@
       letter-spacing: -0.5px;
     }
 
-    /* Statusy (Autoryzowany vs Zwykły) */
     .brand-status {
       font-size: 12px;
       font-weight: 500;
@@ -71,17 +69,22 @@
       color: #94a3b8; 
     }
 
-    /* Estetyczny box na opis pod markami */
+    /* POPRAWIONY, CZYTELNY BOKS Z INFORMACJĄ NA DOLE */
     .info-box {
-      margin-top: 32px;
-      padding: 24px 32px;
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
+      margin-top: 48px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 900px; /* Żeby tekst nie rozjeżdżał się na całą szerokość monitora */
+      padding: 32px 40px;
+      background: #f1f5f9; /* Wyraźniejsze tło */
+      border: 1px solid #cbd5e1; /* Wyraźniejsza ramka */
       border-radius: 12px;
       text-align: center;
-      color: #334155;
-      font-size: 15px;
-      line-height: 1.6;
+      color: #0f172a; /* Ciemny, mocny kolor tekstu */
+      font-size: 18px; /* Duża, czytelna czcionka */
+      line-height: 1.7;
+      font-weight: 500; /* Lekko pogrubiony tekst */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
     }
   </style>
 </head>
@@ -115,13 +118,11 @@
       
       <div class="brands-grid">
         
-        <!-- Panasonic - Jedyny autoryzowany -->
         <article class="brand-card" style="border-color: #bae6fd; box-shadow: 0 4px 10px rgba(2, 132, 199, 0.05);">
           <div class="brand-name">Panasonic</div>
           <div class="brand-status auth">&#10003; Autoryzowany serwis</div>
         </article>
 
-        <!-- TV, Audio i Ekspresy -->
         <article class="brand-card">
           <div class="brand-name">Technics</div>
           <div class="brand-status standard">Serwis pogwarancyjny</div>
@@ -219,7 +220,6 @@
 
       </div>
 
-      <!-- Przywrócony tekst -->
       <div class="info-box">
         Powyższe zestawienie obejmuje wyłącznie producentów, których urządzenia są najczęściej zgłaszane do naszego punktu. Nasz serwis dysponuje zapleczem technicznym umożliwiającym diagnostykę oraz naprawę sprzętu większości marek dostępnych na rynku. Jeżeli Twoje urządzenie nie zostało wymienione na liście, skontaktuj się z nami telefonicznie lub za pośrednictwem poczty e-mail w celu weryfikacji możliwości serwisowych oraz dostępności odpowiednich komponentów zamiennych.
       </div>
