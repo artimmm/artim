@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    /* Siatka: 5 kolumn na dużych ekranach */
+    /* Siatka: 5 kolumn, szerokie i równe odstępy */
     .brands-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 16px;
+      gap: 24px;
     }
     
     @media (min-width: 576px) {
@@ -25,12 +25,12 @@
       .brands-grid { grid-template-columns: repeat(5, 1fr); }
     }
     
-    /* Styl karty marki */
+    /* Przywrócony duży, czytelny styl karty marki */
     .brand-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
-      padding: 24px 16px;
+      padding: 40px 24px;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -38,7 +38,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100px;
+      min-height: 140px;
     }
 
     .brand-card:hover {
@@ -47,16 +47,18 @@
       border-color: #cbd5e1;
     }
 
+    /* Przywrócona duża czcionka marki */
     .brand-name {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 800;
       color: #1e3a8a; 
-      margin-bottom: 6px;
+      margin-bottom: 12px;
       letter-spacing: -0.5px;
     }
 
+    /* Przywrócony rozmiar statusu */
     .brand-status {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 500;
     }
 
@@ -69,21 +71,20 @@
       color: #94a3b8; 
     }
 
-    /* BOKS WYRÓWNANY DO SZEROKOŚCI SIATKI */
+    /* Pomniejszony i uspokojony boks informacyjny */
     .info-box {
-      margin-top: 48px;
+      margin-top: 32px;
       width: 100%;
       box-sizing: border-box;
-      padding: 32px 40px;
-      background: #f1f5f9; 
-      border: 1px solid #cbd5e1; 
+      padding: 24px 32px;
+      background: #f8fafc; 
+      border: 1px solid #e2e8f0; 
       border-radius: 12px;
       text-align: center;
-      color: #0f172a; 
-      font-size: 18px; 
-      line-height: 1.7;
-      font-weight: 500; 
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+      color: #475569; 
+      font-size: 15px; 
+      line-height: 1.6;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
     }
   </style>
 </head>
