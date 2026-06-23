@@ -8,18 +8,26 @@
   <link rel="stylesheet" href="style.css">
   
   <style>
-    .services-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 32px; /* Większy odstęp między kartami */
+    /* Siatka wymuszająca 5 kolumn w jednym rzędzie na dużych ekranach */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px; /* Nieco mniejszy odstęp, żeby wszystko dobrze się zmieściło */
+      align-items: stretch;
+    }
+    
+    @media (min-width: 768px) {
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 1200px) {
+      .services-grid { grid-template-columns: repeat(5, 1fr); } /* 5 w rzędzie */
     }
     
     .premium-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 16px;
-      padding: 40px 36px; /* Dużo więcej przestrzeni wewnątrz */
+      padding: 32px 24px; /* Zoptymalizowane pod 5 kolumn */
       width: 100%;
       box-sizing: border-box;
       display: flex;
@@ -34,46 +42,35 @@
       border-color: #cbd5e1;
     }
 
-    /* Układ: 3 na górze, 2 na dole dla dużych ekranów */
-    @media (min-width: 768px) {
-      .premium-card { width: calc(50% - 16px); }
-    }
-    @media (min-width: 1100px) {
-      .premium-card { width: calc(33.333% - 22px); }
-    }
-
-    /* Nowy wygląd ikonek */
     .premium-card .icon-box {
-      width: 64px;
-      height: 64px;
+      width: 56px;
+      height: 56px;
       background: #f1f5f9;
-      color: #1e3a8a; /* Ciemnoniebieski firmowy */
-      font-size: 24px;
+      color: #1e3a8a; 
+      font-size: 22px;
       font-weight: 800;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 14px;
-      margin-bottom: 28px;
+      border-radius: 12px;
+      margin-bottom: 24px;
     }
 
-    /* Wyraźniejsze nagłówki i opisy */
     .premium-card h3 {
-      font-size: 24px;
+      font-size: 22px;
       color: #0f172a;
       margin-top: 0;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       font-weight: 800;
     }
 
     .premium-card p.desc {
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 14px;
+      line-height: 1.5;
       color: #475569;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
 
-    /* Dużo czytelniejsze listy z wyraźnymi ptaszkami */
     .premium-list {
       list-style: none;
       padding: 0;
@@ -81,14 +78,14 @@
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      gap: 16px; /* Duży odstęp między punktami! */
+      gap: 12px; 
     }
 
     .premium-list li {
       position: relative;
-      padding-left: 32px;
-      font-size: 16px; /* Większa czcionka listy */
-      line-height: 1.5;
+      padding-left: 28px;
+      font-size: 14px; 
+      line-height: 1.4;
       color: #334155;
     }
 
@@ -97,9 +94,9 @@
       position: absolute;
       left: 0;
       top: 0;
-      color: #10b981; /* Ładny, wyraźny zielony */
+      color: #10b981; 
       font-weight: 900;
-      font-size: 18px;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -131,7 +128,7 @@
   <main class="section" style="padding-top: 50px; padding-bottom: 80px;">
     <div class="container">
       
-      <div class="services-flex">
+      <div class="services-grid">
         
         <article class="premium-card">
           <div class="icon-box">TV</div>
@@ -157,11 +154,8 @@
             <li>Naprawa amplitunerów</li>
             <li>Naprawa kin domowych</li>
             <li>Naprawa gramofonów</li>
-            <li>Naprawa głośników przenośnych</li>
-            <li>Naprawa systemów Multi-room</li>
             <li>Naprawa soundbarów</li>
             <li>Naprawa subwooferów</li>
-            <li>Czyszczenie, konserwacja sprzętów audio</li>
           </ul>
         </article>
 
@@ -211,9 +205,4 @@
       <div><strong>ARTIM</strong><br><span class="small">Serwis RTV, TV, audio i małe AGD we Wrocławiu</span></div>
       <div class="small">
         <div>Telefon: <a href="tel:+48601159066">601 159 066</a></div>
-        <div>Adres: Grabiszyńska 241F, Wrocław</div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+        <div>Adres: Grabis
