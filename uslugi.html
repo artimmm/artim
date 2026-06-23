@@ -6,6 +6,25 @@
   <title>Nasze Usługi — Serwis Artim</title>
   <link rel="icon" type="image/jpeg" href="icon.jpg">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Dodatkowy styl, aby wymusić 5 kolumn w jednym rzędzie na dużych ekranach -->
+  <style>
+    .grid-5 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (min-width: 1200px) {
+      .grid-5 {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="topbar">
@@ -34,7 +53,9 @@
 
   <main class="section" style="padding-top: 40px;">
     <div class="container">
-      <div class="grid grid-4">
+      
+      <!-- Zmieniono klasę na grid-5 -->
+      <div class="grid-5">
         
         <!-- 1. TV -->
         <article class="card service-card">
