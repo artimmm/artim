@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://artimmm.github.io/artim/sitemap.xml
