@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://artimmm.github.io/artim/index.html</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://artimmm.github.io/artim/o-serwisie.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://artimmm.github.io/artim/marki.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://artimmm.github.io/artim/uslugi.html</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://artimmm.github.io/artim/proces.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://artimmm.github.io/artim/faq.html</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://artimmm.github.io/artim/kontakt.html</loc>
+    <priority>0.90</priority>
+  </url>
+</urlset>
